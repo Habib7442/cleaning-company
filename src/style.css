@@ -1257,5 +1257,14 @@ p, .body {
   }
 }
 
+.services-grid-layout {
+  gap: var(--s-4);
+}
+@media (min-width: 768px) {
+  .services-grid-layout {
+    gap: var(--s-7) !important;
+  }
+}
+
 
 
