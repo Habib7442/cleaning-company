@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Get an Instant Quote — Lustra</title>
+  <meta name="description" content="Calculate your exact cleaning price and book online in under sixty seconds. Secure checkout powered by Stripe." />
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Get an Instant Quote — Lustra" />
+  <meta property="og:description" content="Calculate your exact cleaning price and book online in under sixty seconds. Secure checkout powered by Stripe." />
+  <meta property="og:image" content="/og_image.png" />
+  <meta property="og:type" content="website" />
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo-wordmark" id="nav-logo">lustra</a>
+      
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="/services.html" class="nav-link" id="nav-link-services">Services</a></li>
+          <li><a href="/pricing.html" class="nav-link" id="nav-link-pricing">Pricing</a></li>
+          <li><a href="/transformations.html" class="nav-link" id="nav-link-transformations">Transformations</a></li>
+          <li><a href="/about.html" class="nav-link" id="nav-link-about">About</a></li>
+          <li><a href="/contact.html" class="nav-link" id="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="currency-switch">
+          <span class="label-mono">EN · USD ($)</span>
+        </div>
+        <a href="/contact.html" class="nav-signin small" id="nav-btn-signin">Sign In</a>
+        <a href="/" class="btn-ghost" style="color: var(--ink); border-color: var(--ink); font-size: 14px;" id="nav-btn-home">Return Home</a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="mobile-menu-toggle" aria-label="Open Menu" aria-controls="mobile-menu-overlay" id="mobile-menu-hamburger">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Navigation -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <span class="logo-wordmark text-invert">lustra</span>
+      <button class="mobile-menu-close" aria-label="Close Menu" id="mobile-menu-close-btn">&times;</button>
+    </div>
+    <div class="mobile-menu-content">
+      <nav aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/transformations.html">Transformations</a></li>
+          <li><a href="/about.html">About & Sustainability</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="/quote.html" class="btn-primary" style="width: 100%; text-align: center;">Get an Instant Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main style="padding-top: 100px;">
+    <section class="section-padding container" style="padding-top: var(--s-8);">
+      
+      <!-- Progress Bar Tracker -->
+      <div style="max-width: 1000px; margin: 0 auto var(--s-7) auto;">
+        <span class="eyebrow" style="display: block; margin-bottom: var(--s-3);">Booking Progress</span>
+        <div style="width: 100%; height: 4px; background-color: var(--stone); border-radius: 99px; overflow: hidden;">
+          <div class="quote-progress-bar" style="width: 12.5%; height: 100%; background-color: var(--ink); transition: width 400ms var(--ease);"></div>
+        </div>
+      </div>
+
+      <!-- Main Layout: Forms left, Summary Sidebar right -->
+      <div id="quote-flow-container" class="grid-12" style="max-width: 1000px; margin: 0 auto; align-items: start;">
+        
+        <!-- Step Container Column (Left) -->
+        <div class="quote-flow-wrapper col-span-7">
+          <h2 class="quote-step-title" style="margin-bottom: var(--s-6); font-family: var(--font-display); font-size: 2.2rem;">Select service type</h2>
+          
+          <!-- STEP 1: Service Type -->
+          <div class="quote-step" data-step-id="service" data-title="What type of clean do you need?">
+            <div class="tiles-grid" style="display: grid; gap: var(--s-4); margin-bottom: var(--s-6);">
+              <label class="tile-label">
+                <input type="radio" name="serviceType" value="home" checked />
+                <span class="tile-box">
+                  <strong>Home Clean</strong>
+                  <span class="text-muted small">Sanctuary maintenance, dust, wipe, vacuum, clean surfaces.</span>
+                </span>
+              </label>
+              <label class="tile-label">
+                <input type="radio" name="serviceType" value="deep" />
+                <span class="tile-box">
+                  <strong>Deep Clean</strong>
+                  <span class="text-muted small">Down to the grout. Heavy grease, scrubbing, baseboards, dust buildup.</span>
+                </span>
+              </label>
+              <label class="tile-label">
+                <input type="radio" name="serviceType" value="move" />
+                <span class="tile-box">
+                  <strong>Move In / Move Out</strong>
+                  <span class="text-muted small">Complete overhaul for empty spaces, cabinets inside/out, full reset.</span>
+                </span>
+              </label>
+              <label class="tile-label">
+                <input type="radio" name="serviceType" value="shortlet" />
+                <span class="tile-box">
+                  <strong>Short-Let Turnaround</strong>
+                  <span class="text-muted small">For Airbnbs: rapid changeover, laundry replacement, host checklist.</span>
+                </span>
+              </label>
+              <label class="tile-label">
+                <input type="radio" name="serviceType" value="office" />
+                <span class="tile-box">
+                  <strong>Studio & Office</strong>
+                  <span class="text-muted small">Workspace cleaning, trash management, commercial grade hygiene.</span>
+                </span>
+              </label>
+            </div>
+            <div class="step-navigation-row">
+              <button type="button" class="btn-primary" data-action="next">Continue to Details</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Property Details -->
+          <div class="quote-step hidden" data-step-id="details" data-title="Tell us about your space">
+            <div class="form-group">
+              <label class="form-label">Ideal Layout Category</label>
+              <div class="tiles-grid-horiz" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); margin-bottom: var(--s-5);">
+                <label class="tile-label">
+                  <input type="radio" name="size" value="studio" />
+                  <span class="tile-box text-center">
+                    <strong>Studio</strong>
+                  </span>
+                </label>
+                <label class="tile-label">
+                  <input type="radio" name="size" value="medium" checked />
+                  <span class="tile-box text-center">
+                    <strong>Apartment</strong>
+                  </span>
+                </label>
+                <label class="tile-label">
+                  <input type="radio" name="size" value="large" />
+                  <span class="tile-box text-center">
+                    <strong>House</strong>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); margin-bottom: var(--s-6);">
+              <div class="form-group">
+                <label class="form-label">Bedrooms</label>
+                <div class="qty-adjuster">
+                  <button type="button" class="qty-minus" aria-label="Decrease bedrooms">&minus;</button>
+                  <input type="number" name="bedrooms" value="2" min="1" max="15" readonly class="qty-input" />
+                  <button type="button" class="qty-plus" aria-label="Increase bedrooms">&plus;</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Bathrooms</label>
+                <div class="qty-adjuster">
+                  <button type="button" class="qty-minus" aria-label="Decrease bathrooms">&minus;</button>
+                  <input type="number" name="bathrooms" value="1" min="1" max="10" readonly class="qty-input" />
+                  <button type="button" class="qty-plus" aria-label="Increase bathrooms">&plus;</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="step-navigation-row">
+              <button type="button" class="btn-ghost" data-action="prev" style="color: var(--ink); border-color: var(--line);">Back</button>
+              <button type="button" class="btn-primary" data-action="next">Continue to Add-ons</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Extras / Add-ons -->
+          <div class="quote-step hidden" data-step-id="addons" data-title="Choose any specific additions">
+            <p class="text-muted" style="margin-bottom: var(--s-5);">Standard tasks (dusting, floors, surfaces) are included in all cleanings. Select optional items for a deep, specialized clean.</p>
+            
+            <div class="tiles-grid" style="display: grid; gap: var(--s-3); margin-bottom: var(--s-6);">
+              <label class="addon-checkbox-label">
+                <input type="checkbox" name="addon" value="oven" />
+                <span class="addon-checkbox-box">
+                  <span class="addon-check-indicator"></span>
+                  <span class="addon-meta">
+                    <strong>Inside Oven</strong>
+                    <span class="text-muted small">Deep grease breakdown, scrub walls, clean grates (+$45)</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" name="addon" value="fridge" />
+                <span class="addon-checkbox-box">
+                  <span class="addon-check-indicator"></span>
+                  <span class="addon-meta">
+                    <strong>Inside Fridge</strong>
+                    <span class="text-muted small">Wipe drawers, clean shelves, remove food residue (+$35)</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" name="addon" value="windows" />
+                <span class="addon-checkbox-box">
+                  <span class="addon-check-indicator"></span>
+                  <span class="addon-meta">
+                    <strong>Interior Windows</strong>
+                    <span class="text-muted small">Wipe glass, sills, and tracks for natural light (+$50)</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" name="addon" value="laundry" />
+                <span class="addon-checkbox-box">
+                  <span class="addon-check-indicator"></span>
+                  <span class="addon-meta">
+                    <strong>Laundry & Fold</strong>
+                    <span class="text-muted small">Wash, dry, and fold one load of linens/clothing (+$40)</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" name="addon" value="cabinets" />
+                <span class="addon-checkbox-box">
+                  <span class="addon-check-indicator"></span>
+                  <span class="addon-meta">
+                    <strong>Inside Cabinets</strong>
+                    <span class="text-muted small">Clean interior of empty kitchen/bathroom cupboards (+$60)</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+
+            <div class="step-navigation-row">
+              <button type="button" class="btn-ghost" data-action="prev" style="color: var(--ink); border-color: var(--line);">Back</button>
+              <button type="button" class="btn-primary" data-action="next">Continue to Frequency</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Frequency -->
+          <div class="quote-step hidden" data-step-id="frequency" data-title="Select clean frequency">
+            <p class="text-muted" style="margin-bottom: var(--s-5);">Subscriptions are flexible, require no long-term contracts, and include complimentary priority scheduling. Modify or pause anytime.</p>
+            
+            <div class="tiles-grid" style="display: grid; gap: var(--s-4); margin-bottom: var(--s-6);">
+              <label class="tile-label">
+                <input type="radio" name="frequency" value="weekly" />
+                <span class="tile-box">
+                  <span style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>Weekly Cleaning</strong>
+                    <span class="badge-citrus">Save 20%</span>
+                  </span>
+                  <span class="text-muted small">Complimentary priority slots. Perfect for busy households.</span>
+                </span>
+              </label>
+              
+              <label class="tile-label">
+                <input type="radio" name="frequency" value="biweekly" checked />
+                <span class="tile-box">
+                  <span style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>Biweekly Cleaning</strong>
+                    <span class="badge-citrus">Save 15%</span>
+                  </span>
+                  <span class="text-muted small">Our most popular schedule. Keeps homes consistently fresh.</span>
+                </span>
+              </label>
+
+              <label class="tile-label">
+                <input type="radio" name="frequency" value="monthly" />
+                <span class="tile-box">
+                  <span style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>Monthly Cleaning</strong>
+                    <span class="badge-citrus">Save 10%</span>
+                  </span>
+                  <span class="text-muted small">A monthly maintenance reset for dust and deeper surfaces.</span>
+                </span>
+              </label>
+
+              <label class="tile-label">
+                <input type="radio" name="frequency" value="oneoff" />
+                <span class="tile-box">
+                  <span><strong>One-off Clean</strong></span>
+                  <span class="text-muted small">No commitment. Single visit tailored to a specific reset.</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="step-navigation-row">
+              <button type="button" class="btn-ghost" data-action="prev" style="color: var(--ink); border-color: var(--line);">Back</button>
+              <button type="button" class="btn-primary" data-action="next">Continue to Schedule</button>
+            </div>
+          </div>
+
+          <!-- STEP 5: Date & Time -->
+          <div class="quote-step hidden" data-step-id="datetime" data-title="Select Date & Time">
+            <div class="form-group" style="margin-bottom: var(--s-5);">
+              <label class="form-label">Available Dates</label>
+              <div class="quote-calendar-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-3);">
+                <!-- Dynamically populated in JavaScript -->
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: var(--s-6);">
+              <label class="form-label">Available Time Slots</label>
+              <div class="quote-slots-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-3);">
+                <!-- Dynamically populated in JavaScript -->
+              </div>
+              <div class="datetime-error-container" style="margin-top: var(--s-2);"></div>
+            </div>
+
+            <div class="step-navigation-row">
+              <button type="button" class="btn-ghost" data-action="prev" style="color: var(--ink); border-color: var(--line);">Back</button>
+              <button type="button" class="btn-primary" data-action="next">Continue to Address</button>
+            </div>
+          </div>
+
+          <!-- STEP 6: Location & Contact -->
+          <div class="quote-step hidden" data-step-id="contact" data-title="Contact & Location details">
+            
+            <div class="form-group">
+              <label class="form-label" for="address">Address (with street, unit number, city)</label>
+              <input type="text" id="address" name="address" class="form-input" placeholder="e.g. 123 Editorial Way, Suite 4B, Lisbon" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="accessNotes">Home Access Instructions (Key code, lockbox location, gate entry)</label>
+              <textarea id="accessNotes" name="accessNotes" class="form-input" style="min-height: 80px; resize: vertical;" placeholder="e.g. Concierge desk has the key under 'Lustra'. Lockbox code 4920."></textarea>
+            </div>
+
+            <div class="divider" style="margin-top: var(--s-5); margin-bottom: var(--s-5);"></div>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: var(--s-2);">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Mara K." required />
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. mara@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +351 912 345 678" required />
+              </div>
+            </div>
+
+            <div class="step-navigation-row" style="margin-top: var(--s-5);">
+              <button type="button" class="btn-ghost" data-action="prev" style="color: var(--ink); border-color: var(--line);">Back</button>
+              <button type="button" class="btn-primary" data-action="next">Continue to Payment</button>
+            </div>
+          </div>
+
+          <!-- STEP 7: Payment & Confirm -->
+          <div class="quote-step hidden" data-step-id="checkout" data-title="Secure Payment Checkout">
+            <form class="quote-final-form">
+              <p class="text-muted" style="margin-bottom: var(--s-5);">Payments are processed securely via Stripe. You will not be billed until after your scheduled cleaning. Modify or cancel free up to 24 hours beforehand.</p>
+              
+              <!-- Mock Stripe Credit Card Form -->
+              <div style="border: 1px solid var(--stone); border-radius: var(--radius); padding: var(--s-5); background-color: var(--paper); margin-bottom: var(--s-6);">
+                <span class="label-mono" style="display: block; margin-bottom: var(--s-3); font-size: 11px;">Stripe Secure Card Details</span>
+                
+                <div class="form-group">
+                  <label class="form-label" style="font-size: 12px;">Card Number</label>
+                  <input type="text" class="form-input" placeholder="4242  4242  4242  4242" required style="font-family: var(--font-mono);" />
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--s-4);">
+                  <div class="form-group">
+                    <label class="form-label" style="font-size: 12px;">Expiry (MM / YY)</label>
+                    <input type="text" class="form-input" placeholder="12 / 28" required style="font-family: var(--font-mono);" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" style="font-size: 12px;">CVC</label>
+                    <input type="text" class="form-input" placeholder="123" required style="font-family: var(--font-mono);" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Re-clean guarantee restated -->
+              <div style="border-left: 2px solid var(--citrus); padding-left: var(--s-4); margin-bottom: var(--s-6);">
+                <p class="small text-muted"><strong>The Lustra Guarantee:</strong> If you are not delighted with your cleaning, contact us within 24 hours. We will send another professional to re-clean the area free of charge.</p>
+              </div>
+
+              <div class="step-navigation-row">
+                <button type="button" class="btn-ghost" data-action="prev" style="color: var(--ink); border-color: var(--line);">Back</button>
+                <button type="submit" class="btn-primary submit-booking-btn">Confirm and Pay</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar Summary Box (Right) -->
+        <div class="quote-summary-sidebar col-span-4" style="position: sticky; top: 120px; background-color: var(--paper); border: 1px solid var(--stone); border-radius: var(--radius); padding: var(--s-5);">
+          <span class="label-mono" style="display: block; margin-bottom: var(--s-3);">Your Invoice Details</span>
+          <div class="divider" style="margin-bottom: var(--s-4);"></div>
+          
+          <ul class="summary-details-list text-muted small" style="list-style: none; display: flex; flex-direction: column; gap: var(--s-3); margin-bottom: var(--s-5);">
+            <!-- Dynamically populated in JavaScript -->
+          </ul>
+          
+          <div class="divider" style="margin-bottom: var(--s-4);"></div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <span style="font-weight: 600;">Total Billed</span>
+            <strong class="summary-total-price" style="font-family: var(--font-display); font-size: 2.2rem;">$0</strong>
+          </div>
+          <p class="small text-muted" style="font-size: 11px; margin-top: var(--s-2); text-align: right;">Billed only after the visit is complete.</p>
+        </div>
+
+      </div>
+
+      <!-- STEP 8: Success/Confirmation Screen (Hidden initially) -->
+      <div class="quote-confirmation-wrapper hidden" style="max-width: 600px; margin: 0 auto; text-align: center; background-color: var(--paper); border: 1px solid var(--stone); border-radius: var(--radius); padding: var(--s-8);">
+        <div style="width: 56px; height: 56px; background-color: var(--citrus); color: var(--ink); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--s-5) auto;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        
+        <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: var(--s-3);">Transformation scheduled.</h2>
+        <p class="body-l text-muted" style="margin-bottom: var(--s-6);">Your booking is secured. You will receive a summary email and text confirmation shortly with details about your cleaner.</p>
+        
+        <!-- Render summary data -->
+        <div class="conf-details text-muted small" style="background-color: var(--bone); padding: var(--s-5); border-radius: var(--radius); text-align: left; margin-bottom: var(--s-6);">
+          <!-- Dynamically populated on checkout -->
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: var(--s-3);">
+          <a href="/" class="btn-primary" style="display: block;">Return to Homepage</a>
+          <a href="/about.html" class="btn-secondary" style="display: block; text-align: center;">Vetting & Vitals: What to expect &rarr;</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer" style="margin-top: var(--s-11);">
+    <div class="container">
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-4); border-top: 1px solid var(--line); padding-top: var(--s-6);">
+        <p class="small text-muted">&copy; 2026 Lustra Services Inc. Vetted, insured, and carbon-considered.</p>
+        <div class="footer-legal-links">
+          <a href="/contact.html" class="small text-muted" style="margin-right: var(--s-4); text-decoration: none;">Privacy Policy</a>
+          <a href="/contact.html" class="small text-muted" style="text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

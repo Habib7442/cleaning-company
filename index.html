@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Lustra — Spaces, transformed. Premium Cleaning Service</title>
+  <meta name="description" content="Lustra is a premium, design-led cleaning service for considered spaces. Vetted professionals, eco-considered products, and seamless 60-second online booking." />
+  <meta name="keywords" content="premium cleaning, luxury maid service, eco-friendly cleaning, professional cleaners, house cleaning" />
+  <meta property="og:title" content="Lustra — Spaces, transformed. Premium Cleaning Service" />
+  <meta property="og:description" content="Sleek, eco-considered cleaning services for premium spaces, booked in sixty seconds." />
+  <meta property="og:image" content="/og_image.png" />
+  <meta property="og:type" content="website" />
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- 1. Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo-wordmark" id="nav-logo">lustra</a>
+      
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="/services.html" class="nav-link" id="nav-link-services">Services</a></li>
+          <li><a href="/pricing.html" class="nav-link" id="nav-link-pricing">Pricing</a></li>
+          <li><a href="/transformations.html" class="nav-link" id="nav-link-transformations">Transformations</a></li>
+          <li><a href="/about.html" class="nav-link" id="nav-link-about">About</a></li>
+          <li><a href="/contact.html" class="nav-link" id="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="currency-switch">
+          <span class="label-mono">EN · USD ($)</span>
+        </div>
+        <a href="/contact.html" class="nav-signin small" id="nav-btn-signin">Sign In</a>
+        <a href="/quote.html" class="btn-primary" id="nav-btn-quote">Get a quote</a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="mobile-menu-toggle" aria-label="Open Menu" aria-controls="mobile-menu-overlay" id="mobile-menu-hamburger">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Navigation -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <span class="logo-wordmark text-invert">lustra</span>
+      <button class="mobile-menu-close" aria-label="Close Menu" id="mobile-menu-close-btn">&times;</button>
+    </div>
+    <div class="mobile-menu-content">
+      <nav aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/transformations.html">Transformations</a></li>
+          <li><a href="/about.html">About & Sustainability</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="/quote.html" class="btn-primary" style="width: 100%; text-align: center;">Get an Instant Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Hero Section (with Squeegee Slider) -->
+  <main>
+    <section class="hero-section grain-overlay" id="hero-section">
+      <div class="container hero-container grid-12">
+        <div class="hero-text-col reveal-on-scroll">
+          <span class="eyebrow">Premium Cleaning · Now in 12 Cities</span>
+          <h1 class="display-xl" style="margin: var(--s-4) 0 var(--s-5) 0;">
+            Spaces, <br /><span class="italic-display">transformed</span>.
+          </h1>
+          <p class="body-l text-muted" style="margin-bottom: var(--s-7); max-width: 500px;">
+            Lustra is a premium cleaning service for considered spaces — vetted professionals, eco-considered products, booked in sixty seconds.
+          </p>
+          <div class="hero-actions">
+            <a href="/quote.html" class="btn-primary" id="hero-cta-quote">Get an instant quote</a>
+            <a href="/transformations.html" class="btn-secondary" id="hero-cta-gallery" style="margin-left: var(--s-5);">See transformations &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Squeegee Slider Container -->
+        <div class="hero-slider-col reveal-on-scroll" style="transition-delay: 150ms;">
+          <div class="squeegee-slider" aria-label="Before and after transformation of living room">
+            
+            <!-- Before State (Bottom) -->
+            <div class="squeegee-image-container squeegee-before">
+              <img src="/assets/living_room_before.png" alt="Untidy dusty living room" class="squeegee-img" />
+              <div class="squeegee-label label-mono">Before</div>
+            </div>
+
+            <!-- After State (Top Masked) -->
+            <div class="squeegee-image-container squeegee-after">
+              <img src="/assets/living_room_after.png" alt="Spotless clean modern living room" class="squeegee-img" />
+              <div class="squeegee-label label-mono" style="right: 20px; left: auto; background-color: var(--citrus); color: var(--ink);">After</div>
+            </div>
+
+            <!-- Drag Handle (Citrus) -->
+            <button class="squeegee-handle" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="squeegee-handle-line"></span>
+              <span class="squeegee-handle-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 18l6-6-6-6"/></svg>
+              </span>
+              <span class="squeegee-handle-line"></span>
+            </button>
+          </div>
+          
+          <!-- Slider Toggle Fallback for Screen Readers & Keyboard -->
+          <div class="slider-accessibility-fallback">
+            <button class="btn-secondary squeegee-toggle-btn" id="squeegee-accessible-toggle">Toggle Before/After Comparison</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Trust Bar (Marquee Ticker) -->
+    <section class="trust-marquee-section" id="trust-bar">
+      <div class="marquee-container" data-speed="25">
+        <div class="marquee-track">
+          <span class="label-mono">Insured & Bonded</span>
+          <span class="marquee-dot"></span>
+          <span class="label-mono">Background-Checked Pros</span>
+          <span class="marquee-dot"></span>
+          <span class="label-mono">4.9/5 Stars Across 40,000+ Cleans</span>
+          <span class="marquee-dot"></span>
+          <span class="label-mono">24-Hour Re-Clean Guarantee</span>
+          <span class="marquee-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Services typographically listed as a menu -->
+    <section class="section-padding container" id="home-services">
+      <div class="services-header grid-12" style="margin-bottom: var(--s-8);">
+        <div class="col-span-6">
+          <span class="eyebrow">01 / Services</span>
+          <h2 style="margin-top: var(--s-3);">What we do.</h2>
+        </div>
+        <div class="col-span-6 pricing-toggle-col">
+          <a href="/services.html" class="btn-secondary">View service details &rarr;</a>
+        </div>
+      </div>
+
+      <div class="services-menu-list">
+        <div class="divider"></div>
+        
+        <a href="/services.html#home-clean" class="service-menu-row">
+          <div class="srv-col-title">
+            <h3 class="service-menu-name">Home Clean</h3>
+          </div>
+          <div class="srv-col-desc">
+            <p class="text-muted">Your everyday sanctuary, kept. Perfect for regular maintenance.</p>
+          </div>
+          <div class="srv-col-price">
+            <span class="label-mono">From $120</span>
+            <span class="srv-arrow">&rarr;</span>
+          </div>
+        </a>
+        <div class="divider"></div>
+
+        <a href="/services.html#deep-clean" class="service-menu-row">
+          <div class="srv-col-title">
+            <h3 class="service-menu-name">Deep Clean</h3>
+          </div>
+          <div class="srv-col-desc">
+            <p class="text-muted">A complete reset — down to the grout and behind appliances.</p>
+          </div>
+          <div class="srv-col-price">
+            <span class="label-mono">From $180</span>
+            <span class="srv-arrow">&rarr;</span>
+          </div>
+        </a>
+        <div class="divider"></div>
+
+        <a href="/services.html#move-clean" class="service-menu-row">
+          <div class="srv-col-title">
+            <h3 class="service-menu-name">Move In / Out</h3>
+          </div>
+          <div class="srv-col-desc">
+            <p class="text-muted">Leave nothing but light. Thorough cleaning for transitioning spaces.</p>
+          </div>
+          <div class="srv-col-price">
+            <span class="label-mono">From $216</span>
+            <span class="srv-arrow">&rarr;</span>
+          </div>
+        </a>
+        <div class="divider"></div>
+
+        <a href="/services.html#short-let" class="service-menu-row">
+          <div class="srv-col-title">
+            <h3 class="service-menu-name">Short-Let Turnaround</h3>
+          </div>
+          <div class="srv-col-desc">
+            <p class="text-muted">Guest-ready, every single time. Fast, reliable Airbnb cleaning.</p>
+          </div>
+          <div class="srv-col-price">
+            <span class="label-mono">From $144</span>
+            <span class="srv-arrow">&rarr;</span>
+          </div>
+        </a>
+        <div class="divider"></div>
+
+        <a href="/contact.html?type=office" class="service-menu-row">
+          <div class="srv-col-title">
+            <h3 class="service-menu-name">Studio & Office</h3>
+          </div>
+          <div class="srv-col-desc">
+            <p class="text-muted">A workspace that breathes. Discreet cleaning for creative studios.</p>
+          </div>
+          <div class="srv-col-price">
+            <span class="label-mono">Tailored</span>
+            <span class="srv-arrow">&rarr;</span>
+          </div>
+        </a>
+        <div class="divider"></div>
+      </div>
+    </section>
+
+    <!-- 5. How It Works - Staggered layout -->
+    <section class="section-padding container" id="home-how">
+      <div style="margin-bottom: var(--s-8);">
+        <span class="eyebrow">02 / How it works</span>
+        <h2 style="margin-top: var(--s-3);">Simple, transparent, considered.</h2>
+      </div>
+
+      <div class="grid-12 how-stagger-grid">
+        <div class="how-step-col reveal-on-scroll">
+          <div class="how-num">01</div>
+          <h3 style="margin-bottom: var(--s-3);">Tell us about your space.</h3>
+          <p class="text-muted">Share a few details about your property size and needs. A sixty-second flow yields an instant, honest quote.</p>
+        </div>
+
+        <div class="how-step-col reveal-on-scroll" style="transition-delay: 150ms;">
+          <div class="how-num">02</div>
+          <h3 style="margin-bottom: var(--s-3);">Choose a time that suits.</h3>
+          <p class="text-muted">Pick your preferred calendar slot. Whether scheduling a one-off reset or a regular subscription, you are in control.</p>
+        </div>
+
+        <div class="how-step-col reveal-on-scroll" style="transition-delay: 300ms;">
+          <div class="how-num">03</div>
+          <h3 style="margin-bottom: var(--s-3);">We arrive, and transform.</h3>
+          <p class="text-muted">A vetted, background-checked Lustra professional takes care of everything using plant-based products. You walk back into calm.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Why Lustra (Inverted Ink/Bone section) -->
+    <section class="section-padding inverted-section grain-overlay" id="home-why">
+      <div class="container grid-12">
+        <div class="col-span-5 reveal-on-scroll">
+          <span class="eyebrow" style="color: var(--citrus);">03 / Why Us</span>
+          <h2 style="margin-top: var(--s-3); margin-bottom: var(--s-5);">Beyond spotless.</h2>
+          <p class="body-l text-muted" style="margin-bottom: var(--s-6);">We believe cleaning is a hospitality craft. Our systems are built to respect your time, home, and environment.</p>
+          <a href="/quote.html" class="btn-primary">Book in sixty seconds</a>
+        </div>
+        
+        <div class="col-span-6 reveal-on-scroll" id="why-bullets-list" style="transition-delay: 150ms;">
+          <ul class="why-bullet-points">
+            <li>
+              <div class="why-bullet-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--citrus)" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <strong>Fairly Paid Professionals</strong>
+                <p class="small text-muted" style="margin-top: 4px;">Our cleaners are background-checked, comprehensively trained, insured, and paid living wages.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-bullet-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--citrus)" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <strong>Eco-Considered Chemistry</strong>
+                <p class="small text-muted" style="margin-top: 4px;">We clean with plant-derived, biodegradable formulas that are light on fragrance and tough on grime.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-bullet-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--citrus)" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <strong>The Lustra Re-Clean Guarantee</strong>
+                <p class="small text-muted" style="margin-top: 4px;">If any corner is missed, notify us within 24 hours. We will return to clean the area free of charge.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-bullet-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--citrus)" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <strong>Seamless Global Account</strong>
+                <p class="small text-muted" style="margin-top: 4px;">Manage cleanings across multiple properties or cities in a single, simple digital interface.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Pricing Teaser Table -->
+    <section class="section-padding container" id="home-pricing">
+      <div class="pricing-header-row grid-12" style="margin-bottom: var(--s-7);">
+        <div class="col-span-6">
+          <span class="eyebrow">04 / Pricing</span>
+          <h2 style="margin-top: var(--s-3);">Honest pricing. No surprises.</h2>
+        </div>
+        <div class="pricing-toggle-col col-span-6">
+          <div class="pricing-frequency-toggle" data-target-table=".pricing-teaser-table">
+            <button class="btn-primary active" data-freq="biweekly">Biweekly <span class="badge-citrus">-15%</span></button>
+            <button class="btn-ghost" data-freq="weekly">Weekly <span class="badge-citrus">-20%</span></button>
+            <button class="btn-ghost" data-freq="oneoff">One-off</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Editorial Pricing Grid -->
+      <table class="pricing-teaser-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--ink);">
+            <th class="label-mono" style="padding-bottom: var(--s-4);">Space Size</th>
+            <th class="label-mono" style="padding-bottom: var(--s-4);">Ideal For</th>
+            <th class="label-mono" style="padding-bottom: var(--s-4); text-align: right;">Billed Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-base-price="120" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">Studio</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Micro apartments, open floor lofts</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.5rem;">$102</strong></td>
+          </tr>
+          <tr data-base-price="160" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">1–2 Bedrooms</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Standard apartments, small townhomes</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.5rem;">$136</strong></td>
+          </tr>
+          <tr data-base-price="240" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">3–4 Bedrooms</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Family homes, large apartments</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.5rem;">$204</strong></td>
+          </tr>
+          <tr data-base-price="340" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">5+ Bed / Estate</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Multi-level residences, estates</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.5rem;">$289</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: var(--s-6); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-4);">
+        <p class="small text-muted">* Prices shown reflect selected frequency savings. Standard rates apply for customized spaces. Add-ons available during booking.</p>
+        <a href="/pricing.html" class="btn-secondary">View detailed add-on pricing &rarr;</a>
+      </div>
+    </section>
+
+    <!-- 8. Testimonials Section -->
+    <section class="section-padding container" style="background-color: var(--paper); border-radius: var(--radius); margin-top: var(--s-8);" id="home-reviews">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <span class="eyebrow" style="margin-bottom: var(--s-5); display: inline-block;">05 / Word of Mouth</span>
+        <blockquote style="margin-bottom: var(--s-6);">
+          <h2 style="font-family: var(--font-display); font-weight: 400; line-height: 1.2; font-style: italic;">
+            "I have never written a review for a cleaning service in my life. Then I walked back into my home after a Lustra clean. The quiet, the light, the smell of clean stone — they treat space like craft."
+          </h2>
+        </blockquote>
+        <cite class="label-mono" style="font-style: normal; color: var(--slate);">
+          Mara K. &middot; Berlin Residence &middot; &starf;&starf;&starf;&starf;&starf;
+        </cite>
+      </div>
+    </section>
+
+    <!-- 9. Sustainability Section (Sage Highlight) -->
+    <section class="sustainability-banner-section section-padding" style="background-color: #e5edd6; color: var(--ink);" id="home-eco">
+      <div class="container grid-12">
+        <div class="col-span-6 reveal-on-scroll">
+          <span class="eyebrow">06 / Conscience</span>
+          <h2 style="font-family: var(--font-display); font-weight: 400; margin-top: var(--s-3); margin-bottom: var(--s-5);">Clean shouldn't cost the earth.</h2>
+          <p class="body-l" style="margin-bottom: var(--s-6); max-width: 500px;">
+            We use plant-based, fragrance-light products that are biodegradable and allergy-sensitive. No plastic refills, carbon-optimized routing, and a zero-waste chemical system ensure we leave only light behind.
+          </p>
+          <a href="/about.html#sustainability" class="btn-secondary">Read our eco commitments &rarr;</a>
+        </div>
+        <div class="col-span-6 reveal-on-scroll" style="display: flex; align-items: center; justify-content: center; transition-delay: 150ms;">
+          <div class="eco-visual-card" style="border: 1px solid var(--stone); background: var(--paper); padding: var(--s-6); border-radius: var(--radius); text-align: center; max-width: 380px;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" style="margin-bottom: var(--s-4);"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v12M6 12h12"/></svg>
+            <h3 style="font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; margin-bottom: var(--s-2);">100% Biodegradable</h3>
+            <p class="small text-muted">All formulations decompose within 28 days without polluting aquatic systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Coverage (City Marquee Ticker) -->
+    <section class="section-padding" style="overflow: hidden; border-bottom: 1px solid var(--line); border-top: 1px solid var(--line);" id="home-cities">
+      <div class="container" style="text-align: center; margin-bottom: var(--s-6);">
+        <span class="eyebrow">07 / Coverage</span>
+        <h2 style="font-family: var(--font-display); margin-top: var(--s-2);">Now cleaning in 12 cities.</h2>
+      </div>
+
+      <div class="marquee-container" data-speed="35" style="background-color: var(--paper); padding: var(--s-4) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+        <div class="marquee-track" style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); text-transform: uppercase; font-weight: 300;">
+          <span style="margin-right: var(--s-8);">Tokyo <span class="marquee-bullet">&bull;</span></span>
+          <span style="margin-right: var(--s-8);">Paris <span class="marquee-bullet">&bull;</span></span>
+          <span style="margin-right: var(--s-8);">Berlin <span class="marquee-bullet">&bull;</span></span>
+          <span style="margin-right: var(--s-8);">Lisbon <span class="marquee-bullet">&bull;</span></span>
+          <span style="margin-right: var(--s-8);">London <span class="marquee-bullet">&bull;</span></span>
+          <span style="margin-right: var(--s-8);">New York <span class="marquee-bullet">&bull;</span></span>
+          <span style="margin-right: var(--s-8);">Los Angeles <span class="marquee-bullet">&bull;</span></span>
+          <span style="margin-right: var(--s-8);">Singapore <span class="marquee-bullet">&bull;</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Final Call To Action -->
+    <section class="section-padding inverted-section grain-overlay" style="text-align: center; padding-top: clamp(100px, 15vh, 200px); padding-bottom: clamp(100px, 15vh, 200px);" id="final-cta">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="display-xl" style="margin-bottom: var(--s-6);">Your best space is sixty seconds away.</h2>
+        <a href="/quote.html" class="btn-primary" id="cta-final-book">Get an instant quote</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top grid-12" style="padding-bottom: var(--s-8); margin-bottom: var(--s-8); border-bottom: 1px solid var(--line);">
+        
+        <div class="footer-brand-col">
+          <a href="/" class="logo-wordmark" style="font-size: 2.2rem; display: block; margin-bottom: var(--s-3);">lustra</a>
+          <p class="text-muted small" style="margin-bottom: var(--s-5);">The clean you feel the moment you walk in. Eco-considered cleaning as hospitality and craft.</p>
+          
+          <form class="newsletter-form" id="newsletter-footer" aria-label="Newsletter Signup">
+            <span class="label-mono" style="display: block; margin-bottom: 8px; font-size: 11px;">The Journal</span>
+            <div style="display: flex; position: relative;">
+              <input type="email" placeholder="Your email address" class="form-input" style="flex: 1; margin-bottom: 0; padding-right: 48px;" aria-label="Email address" required />
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">&rarr;</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="label-mono" style="display: block; margin-bottom: var(--s-4);">Services</span>
+          <ul class="footer-list">
+            <li><a href="/services.html#home-clean">Home Clean</a></li>
+            <li><a href="/services.html#deep-clean">Deep Clean</a></li>
+            <li><a href="/services.html#move-clean">Move In / Out</a></li>
+            <li><a href="/services.html#short-let">Airbnb Turnaround</a></li>
+            <li><a href="/contact.html?type=office">Studio Cleaning</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="label-mono" style="display: block; margin-bottom: var(--s-4);">Company</span>
+          <ul class="footer-list">
+            <li><a href="/about.html">About Story</a></li>
+            <li><a href="/about.html#sustainability">Sustainability</a></li>
+            <li><a href="/about.html#careers">Careers</a></li>
+            <li><a href="/contact.html">Journal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="label-mono" style="display: block; margin-bottom: var(--s-4);">Support & Reach</span>
+          <ul class="footer-list">
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/about.html#faq">Frequently Asked FAQs</a></li>
+            <li><a href="/about.html#guarantee">Our Guarantee</a></li>
+            <li><a href="/quote.html">Book Online</a></li>
+            <li><span class="text-muted">Direct Line: +1 (800) 555-LSTR</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-4);">
+        <p class="small text-muted">&copy; 2026 Lustra Services Inc. All rights reserved. Vetted and insured worldwide.</p>
+        <div class="footer-legal-links">
+          <a href="/contact.html" class="small text-muted" style="margin-right: var(--s-4); text-decoration: none;">Privacy Policy</a>
+          <a href="/contact.html" class="small text-muted" style="margin-right: var(--s-4); text-decoration: none;">Terms of Service</a>
+          <a href="/contact.html" class="small text-muted" style="text-decoration: none;">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

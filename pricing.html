@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Pricing & Plans — Lustra</title>
+  <meta name="description" content="Transparent, flat pricing for Lustra cleaning services. View size categories, subscription discounts, and flat-rate add-ons." />
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Pricing & Plans — Lustra" />
+  <meta property="og:description" content="Transparent, flat pricing for Lustra cleaning services. View size categories, subscription discounts, and flat-rate add-ons." />
+  <meta property="og:image" content="/og_image.png" />
+  <meta property="og:type" content="website" />
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo-wordmark" id="nav-logo">lustra</a>
+      
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="/services.html" class="nav-link" id="nav-link-services">Services</a></li>
+          <li><a href="/pricing.html" class="nav-link active" id="nav-link-pricing">Pricing</a></li>
+          <li><a href="/transformations.html" class="nav-link" id="nav-link-transformations">Transformations</a></li>
+          <li><a href="/about.html" class="nav-link" id="nav-link-about">About</a></li>
+          <li><a href="/contact.html" class="nav-link" id="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="currency-switch">
+          <span class="label-mono">EN · USD ($)</span>
+        </div>
+        <a href="/contact.html" class="nav-signin small" id="nav-btn-signin">Sign In</a>
+        <a href="/quote.html" class="btn-primary" id="nav-btn-quote">Get a quote</a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="mobile-menu-toggle" aria-label="Open Menu" aria-controls="mobile-menu-overlay" id="mobile-menu-hamburger">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Navigation -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <span class="logo-wordmark text-invert">lustra</span>
+      <button class="mobile-menu-close" aria-label="Close Menu" id="mobile-menu-close-btn">&times;</button>
+    </div>
+    <div class="mobile-menu-content">
+      <nav aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/transformations.html">Transformations</a></li>
+          <li><a href="/about.html">About & Sustainability</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="/quote.html" class="btn-primary" style="width: 100%; text-align: center;">Get an Instant Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main style="padding-top: 100px;">
+    
+    <!-- Title Section -->
+    <section class="section-padding container">
+      <div style="max-width: 800px;">
+        <span class="eyebrow">Pricing & Plans</span>
+        <h1 style="margin-top: var(--s-3); margin-bottom: var(--s-5);">Radically transparent rates.</h1>
+        <p class="body-l text-muted">We charge flat rates based on space size and frequency. No hidden surcharges, no surprise fees. Estimate your pricing below, then book online.</p>
+      </div>
+    </section>
+
+    <!-- Pricing Grid Table Selector -->
+    <section class="section-padding container" style="border-top: 1px solid var(--line);">
+      <div class="pricing-selector-container" style="margin-bottom: var(--s-7); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-4);">
+        <div>
+          <span class="label-mono">Estimated Flat Rates</span>
+        </div>
+        <div class="pricing-frequency-toggle" data-target-table=".pricing-main-table">
+          <button class="btn-primary active" data-freq="biweekly">Biweekly <span class="badge-citrus">-15%</span></button>
+          <button class="btn-ghost" data-freq="weekly">Weekly <span class="badge-citrus">-20%</span></button>
+          <button class="btn-ghost" data-freq="oneoff">One-off</button>
+        </div>
+      </div>
+
+      <table class="pricing-main-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--ink);">
+            <th class="label-mono" style="padding-bottom: var(--s-4);">Home Category</th>
+            <th class="label-mono" style="padding-bottom: var(--s-4);">Ideal Layout</th>
+            <th class="label-mono" style="padding-bottom: var(--s-4); text-align: right;">Billed Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-base-price="120" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">Studio</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Micro apartments, open floor lofts (1 Bed, 1 Bath max)</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.8rem;">$102</strong></td>
+          </tr>
+          <tr data-base-price="160" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">1–2 Bedrooms</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Standard apartments, small townhomes (1-2 Bed, 1-1.5 Bath)</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.8rem;">$136</strong></td>
+          </tr>
+          <tr data-base-price="240" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">3–4 Bedrooms</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Family residences, large flats (3-4 Bed, 2-3 Bath)</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.8rem;">$204</strong></td>
+          </tr>
+          <tr data-base-price="340" data-factor="1.0" style="border-bottom: 1px solid var(--stone);">
+            <td style="padding: var(--s-5) 0;"><h3 style="font-family: var(--font-body); font-weight: 500;">5+ Bed / Estate</h3></td>
+            <td class="text-muted" style="padding: var(--s-5) 0;">Multi-level residences, estates, villas (5+ Bed, 3+ Bath)</td>
+            <td style="padding: var(--s-5) 0; text-align: right;"><strong class="row-price-value" style="font-family: var(--font-display); font-size: 1.8rem;">$289</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Add-on Typographic List -->
+    <section class="section-padding container" style="border-top: 1px solid var(--line);">
+      <div class="grid-12">
+        <div class="col-span-4">
+          <span class="label-mono">Flat-Rate Customization</span>
+          <h2 style="margin-top: var(--s-3); margin-bottom: var(--s-4);">Optional add-ons.</h2>
+          <p class="body text-muted">Tailor your visit. These specific tasks can be selected during checkout to match your exact cleaning requirements.</p>
+        </div>
+        
+        <div class="col-span-7">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--s-3);">
+            <li style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: var(--s-3);">
+              <div>
+                <strong>Inside Oven</strong>
+                <p class="small text-muted" style="margin-top: 4px;">Grease removal and wall scrub</p>
+              </div>
+              <span class="label-mono">$45</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: var(--s-3);">
+              <div>
+                <strong>Inside Refrigerator</strong>
+                <p class="small text-muted" style="margin-top: 4px;">Shelves wipe-down and sanitizing</p>
+              </div>
+              <span class="label-mono">$35</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: var(--s-3);">
+              <div>
+                <strong>Interior Windows</strong>
+                <p class="small text-muted" style="margin-top: 4px;">Wiping glass and tracking channels</p>
+              </div>
+              <span class="label-mono">$50</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: var(--s-3);">
+              <div>
+                <strong>Laundry & Fold</strong>
+                <p class="small text-muted" style="margin-top: 4px;">One full load washed and neatly folded</p>
+              </div>
+              <span class="label-mono">$40</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: var(--s-3);">
+              <div>
+                <strong>Inside Cabinets</strong>
+                <p class="small text-muted" style="margin-top: 4px;">Empty kitchen and bathroom cupboards</p>
+              </div>
+              <span class="label-mono">$60</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Factors & Guarantee (Inverted Theme) -->
+    <section class="section-padding inverted-section grain-overlay">
+      <div class="container grid-12">
+        <div class="col-span-5">
+          <h2 style="font-family: var(--font-display); font-weight: 400; margin-bottom: var(--s-5);">What affects your price?</h2>
+          <p class="text-muted" style="margin-bottom: var(--s-5);">Lustra pricing models are calculated around average room layout dimensions. The following items can influence final calculations:</p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--s-3); font-size: 0.95rem;" class="text-muted">
+            <li>&bull; **Additional bathrooms:** Bathrooms require high hygiene care and raise pricing margins.</li>
+            <li>&bull; **Condition rescales:** Extremely neglected spaces may trigger a Deep Clean upgrade.</li>
+            <li>&bull; **Pets:** We accommodate pets, but highly hairy areas may require extra detailing.</li>
+          </ul>
+        </div>
+        <div class="col-span-6 pricing-guarantee-box">
+          <span class="label-mono" style="color: var(--citrus); display: block; margin-bottom: var(--s-4);">The Lustra Guarantee</span>
+          <h3 style="font-family: var(--font-display); font-weight: 400; line-height: 1.3; font-style: italic; margin-bottom: var(--s-4);">"If you are not entirely satisfied with a clean, notify us within 24 hours. We will return to re-clean the area, free."</h3>
+          <p class="small text-muted">We maintain a rigorous quality auditing program for all cleaner partners to ensure this guarantee is rarely needed.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-4); border-top: 1px solid var(--line); padding-top: var(--s-6);">
+        <p class="small text-muted">&copy; 2026 Lustra Services Inc. Vetted, insured, and carbon-considered.</p>
+        <div class="footer-legal-links">
+          <a href="/" class="small text-muted" style="margin-right: var(--s-4); text-decoration: none;">Privacy Policy</a>
+          <a href="/" class="small text-muted" style="text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

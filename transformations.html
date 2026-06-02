@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Transformations Gallery — Lustra</title>
+  <meta name="description" content="View before and after interactive squeegee comparisons of Lustra cleanings across premium living rooms and kitchens." />
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Transformations Gallery — Lustra" />
+  <meta property="og:description" content="View before and after interactive squeegee comparisons of Lustra cleanings across premium living rooms and kitchens." />
+  <meta property="og:image" content="/og_image.png" />
+  <meta property="og:type" content="website" />
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo-wordmark" id="nav-logo">lustra</a>
+      
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="/services.html" class="nav-link" id="nav-link-services">Services</a></li>
+          <li><a href="/pricing.html" class="nav-link" id="nav-link-pricing">Pricing</a></li>
+          <li><a href="/transformations.html" class="nav-link active" id="nav-link-transformations">Transformations</a></li>
+          <li><a href="/about.html" class="nav-link" id="nav-link-about">About</a></li>
+          <li><a href="/contact.html" class="nav-link" id="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="currency-switch">
+          <span class="label-mono">EN · USD ($)</span>
+        </div>
+        <a href="/contact.html" class="nav-signin small" id="nav-btn-signin">Sign In</a>
+        <a href="/quote.html" class="btn-primary" id="nav-btn-quote">Get a quote</a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="mobile-menu-toggle" aria-label="Open Menu" aria-controls="mobile-menu-overlay" id="mobile-menu-hamburger">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Navigation -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <span class="logo-wordmark text-invert">lustra</span>
+      <button class="mobile-menu-close" aria-label="Close Menu" id="mobile-menu-close-btn">&times;</button>
+    </div>
+    <div class="mobile-menu-content">
+      <nav aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/transformations.html">Transformations</a></li>
+          <li><a href="/about.html">About & Sustainability</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="/quote.html" class="btn-primary" style="width: 100%; text-align: center;">Get an Instant Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main style="padding-top: 100px;">
+    
+    <!-- Title Section -->
+    <section class="section-padding container">
+      <div style="max-width: 800px;">
+        <span class="eyebrow">Visual Proof</span>
+        <h1 style="margin-top: var(--s-3); margin-bottom: var(--s-5);">Seeing is believing.</h1>
+        <p class="body-l text-muted">Use the sliders to inspect our craftsmanship. From dust layers to polished marble, we return your home to its initial design intention.</p>
+      </div>
+    </section>
+
+    <!-- Interactive Comparison Grid -->
+    <section class="section-padding container" style="border-top: 1px solid var(--line);">
+      <div style="display: grid; grid-template-columns: 1fr; gap: var(--s-9);">
+        
+        <!-- Slider 1: Living Room -->
+        <div class="transformation-block">
+          <div class="grid-12" style="align-items: center; margin-bottom: var(--s-5);">
+            <div class="col-span-5">
+              <span class="label-mono">01 / Residential</span>
+              <h2 style="margin-top: var(--s-3); font-size: 2rem;">Living Room &bull; New York</h2>
+              <p class="text-muted" style="margin-top: var(--s-3);">A deep reset of a light-filled apartment. Dust removal on shelving, clean baseboards, vacuumed wool rugs, and polished wood tables.</p>
+            </div>
+          </div>
+
+          <!-- Slider Widget -->
+          <div class="squeegee-slider" style="max-width: 1000px; margin: 0 auto;" aria-label="Living room before and after comparison">
+            <!-- Before Image -->
+            <div class="squeegee-image-container squeegee-before">
+              <img src="/assets/living_room_before.png" alt="Living room before cleaning" class="squeegee-img" />
+              <div class="squeegee-label label-mono">Before</div>
+            </div>
+
+            <!-- After Image -->
+            <div class="squeegee-image-container squeegee-after">
+              <img src="/assets/living_room_after.png" alt="Living room after cleaning" class="squeegee-img" />
+              <div class="squeegee-label label-mono" style="right: 20px; left: auto; background-color: var(--citrus); color: var(--ink);">After</div>
+            </div>
+
+            <!-- Handle -->
+            <button class="squeegee-handle" aria-label="Drag slider to compare rooms" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="squeegee-handle-line"></span>
+              <span class="squeegee-handle-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 18l6-6-6-6"/></svg>
+              </span>
+              <span class="squeegee-handle-line"></span>
+            </button>
+          </div>
+          
+          <div style="text-align: center; margin-top: var(--s-4);">
+            <button class="btn-secondary squeegee-toggle-btn">Toggle Before/After</button>
+          </div>
+        </div>
+
+        <!-- Slider 2: Kitchen Counter -->
+        <div class="transformation-block">
+          <div class="grid-12" style="align-items: center; margin-bottom: var(--s-5);">
+            <div class="col-span-5">
+              <span class="label-mono">02 / Kitchen Detail</span>
+              <h2 style="margin-top: var(--s-3); font-size: 2rem;">Marble Kitchen &bull; Lisbon</h2>
+              <p class="text-muted" style="margin-top: var(--s-3);">Grease removal and marble counter conditioning. Sinks, fixtures, splash-backs, and range hoods polished using stone-safe formulations.</p>
+            </div>
+          </div>
+
+          <!-- Slider Widget -->
+          <div class="squeegee-slider" style="max-width: 1000px; margin: 0 auto;" aria-label="Kitchen counter before and after comparison">
+            <!-- Before Image -->
+            <div class="squeegee-image-container squeegee-before">
+              <img src="/assets/kitchen_before.png" alt="Kitchen counter before cleaning" class="squeegee-img" />
+              <div class="squeegee-label label-mono">Before</div>
+            </div>
+
+            <!-- After Image -->
+            <div class="squeegee-image-container squeegee-after">
+              <img src="/assets/kitchen_after.png" alt="Kitchen counter after cleaning" class="squeegee-img" />
+              <div class="squeegee-label label-mono" style="right: 20px; left: auto; background-color: var(--citrus); color: var(--ink);">After</div>
+            </div>
+
+            <!-- Handle -->
+            <button class="squeegee-handle" aria-label="Drag slider to compare rooms" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="squeegee-handle-line"></span>
+              <span class="squeegee-handle-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 18l6-6-6-6"/></svg>
+              </span>
+              <span class="squeegee-handle-line"></span>
+            </button>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--s-4);">
+            <button class="btn-secondary squeegee-toggle-btn">Toggle Before/After</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final CTA Section (Dark Theme) -->
+    <section class="section-padding inverted-section grain-overlay" style="text-align: center;">
+      <div class="container" style="max-width: 700px;">
+        <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: var(--s-5);">Experience the transformation yourself.</h2>
+        <a href="/quote.html" class="btn-primary">Book in sixty seconds</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-4); border-top: 1px solid var(--line); padding-top: var(--s-6);">
+        <p class="small text-muted">&copy; 2026 Lustra Services Inc. Vetted, insured, and carbon-considered.</p>
+        <div class="footer-legal-links">
+          <a href="/" class="small text-muted" style="margin-right: var(--s-4); text-decoration: none;">Privacy Policy</a>
+          <a href="/" class="small text-muted" style="text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
