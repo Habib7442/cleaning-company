@@ -78,89 +78,71 @@
       <div style="max-width: 800px;">
         <span class="eyebrow">Visual Proof</span>
         <h1 style="margin-top: var(--s-3); margin-bottom: var(--s-5);">Seeing is believing.</h1>
-        <p class="body-l text-muted">Use the sliders to inspect our craftsmanship. From dust layers to polished marble, we return your home to its initial design intention.</p>
+        <p class="body-l text-muted">Compare our craftsmanship side-by-side. From dust layers to polished marble, we return your home to its initial design intention.</p>
       </div>
     </section>
 
-    <!-- Interactive Comparison Grid -->
+    <!-- Static Comparison Grid -->
     <section class="section-padding container" style="border-top: 1px solid var(--line);">
       <div style="display: grid; grid-template-columns: 1fr; gap: var(--s-9);">
         
-        <!-- Slider 1: Living Room -->
+        <!-- Block 1: Living Room -->
         <div class="transformation-block">
-          <div class="grid-12" style="align-items: center; margin-bottom: var(--s-5);">
-            <div class="col-span-5">
+          <div class="grid-12" style="align-items: center; margin-bottom: var(--s-6);">
+            <div class="col-span-12">
               <span class="label-mono">01 / Residential</span>
               <h2 style="margin-top: var(--s-3); font-size: 2rem;">Living Room &bull; New York</h2>
-              <p class="text-muted" style="margin-top: var(--s-3);">A deep reset of a light-filled apartment. Dust removal on shelving, clean baseboards, vacuumed wool rugs, and polished wood tables.</p>
+              <p class="text-muted" style="margin-top: var(--s-3); max-width: 600px;">A deep reset of a light-filled apartment. Dust removal on shelving, clean baseboards, vacuumed wool rugs, and polished wood tables.</p>
             </div>
           </div>
 
-          <!-- Slider Widget -->
-          <div class="squeegee-slider" style="max-width: 1000px; margin: 0 auto;" aria-label="Living room before and after comparison">
-            <!-- Before Image -->
-            <div class="squeegee-image-container squeegee-before">
-              <img src="/assets/living_room_before.png" alt="Living room before cleaning" class="squeegee-img" />
-              <div class="squeegee-label label-mono">Before</div>
+          <!-- Static Grid -->
+          <div class="grid-12" style="gap: var(--s-6);">
+            <!-- Before -->
+            <div class="col-span-6 reveal-on-scroll">
+              <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 16/10;">
+                <img src="/assets/living_room_before.png" alt="Living room before Lustra cleaning" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+                <span class="label-mono" style="position: absolute; bottom: 20px; left: 20px; background-color: var(--ink); color: var(--bone); padding: 4px 10px; font-size: 11px;">Before</span>
+              </div>
             </div>
-
-            <!-- After Image -->
-            <div class="squeegee-image-container squeegee-after">
-              <img src="/assets/living_room_after.png" alt="Living room after cleaning" class="squeegee-img" />
-              <div class="squeegee-label label-mono" style="right: 20px; left: auto; background-color: var(--citrus); color: var(--ink);">After</div>
+            
+            <!-- After -->
+            <div class="col-span-6 reveal-on-scroll" style="transition-delay: 150ms;">
+              <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 16/10;">
+                <img src="/assets/living_room_after.png" alt="Living room after Lustra cleaning" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+                <span class="label-mono" style="position: absolute; bottom: 20px; left: 20px; background-color: var(--citrus); color: var(--ink); padding: 4px 10px; font-size: 11px;">After</span>
+              </div>
             </div>
-
-            <!-- Handle -->
-            <button class="squeegee-handle" aria-label="Drag slider to compare rooms" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-              <span class="squeegee-handle-line"></span>
-              <span class="squeegee-handle-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 18l6-6-6-6"/></svg>
-              </span>
-              <span class="squeegee-handle-line"></span>
-            </button>
-          </div>
-          
-          <div style="text-align: center; margin-top: var(--s-4);">
-            <button class="btn-secondary squeegee-toggle-btn">Toggle Before/After</button>
           </div>
         </div>
 
-        <!-- Slider 2: Kitchen Counter -->
-        <div class="transformation-block">
-          <div class="grid-12" style="align-items: center; margin-bottom: var(--s-5);">
-            <div class="col-span-5">
+        <!-- Block 2: Kitchen Counter -->
+        <div class="transformation-block" style="border-top: 1px solid var(--line); padding-top: var(--s-8);">
+          <div class="grid-12" style="align-items: center; margin-bottom: var(--s-6);">
+            <div class="col-span-12">
               <span class="label-mono">02 / Kitchen Detail</span>
               <h2 style="margin-top: var(--s-3); font-size: 2rem;">Marble Kitchen &bull; Lisbon</h2>
-              <p class="text-muted" style="margin-top: var(--s-3);">Grease removal and marble counter conditioning. Sinks, fixtures, splash-backs, and range hoods polished using stone-safe formulations.</p>
+              <p class="text-muted" style="margin-top: var(--s-3); max-width: 600px;">Grease removal and marble counter conditioning. Sinks, fixtures, splash-backs, and range hoods polished using stone-safe formulations.</p>
             </div>
           </div>
 
-          <!-- Slider Widget -->
-          <div class="squeegee-slider" style="max-width: 1000px; margin: 0 auto;" aria-label="Kitchen counter before and after comparison">
-            <!-- Before Image -->
-            <div class="squeegee-image-container squeegee-before">
-              <img src="/assets/kitchen_before.png" alt="Kitchen counter before cleaning" class="squeegee-img" />
-              <div class="squeegee-label label-mono">Before</div>
+          <!-- Static Grid -->
+          <div class="grid-12" style="gap: var(--s-6);">
+            <!-- Before -->
+            <div class="col-span-6 reveal-on-scroll">
+              <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 16/10;">
+                <img src="/assets/kitchen_before.png" alt="Kitchen counter before Lustra cleaning" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+                <span class="label-mono" style="position: absolute; bottom: 20px; left: 20px; background-color: var(--ink); color: var(--bone); padding: 4px 10px; font-size: 11px;">Before</span>
+              </div>
             </div>
-
-            <!-- After Image -->
-            <div class="squeegee-image-container squeegee-after">
-              <img src="/assets/kitchen_after.png" alt="Kitchen counter after cleaning" class="squeegee-img" />
-              <div class="squeegee-label label-mono" style="right: 20px; left: auto; background-color: var(--citrus); color: var(--ink);">After</div>
+            
+            <!-- After -->
+            <div class="col-span-6 reveal-on-scroll" style="transition-delay: 150ms;">
+              <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 16/10;">
+                <img src="/assets/kitchen_after.png" alt="Kitchen counter after Lustra cleaning" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+                <span class="label-mono" style="position: absolute; bottom: 20px; left: 20px; background-color: var(--citrus); color: var(--ink); padding: 4px 10px; font-size: 11px;">After</span>
+              </div>
             </div>
-
-            <!-- Handle -->
-            <button class="squeegee-handle" aria-label="Drag slider to compare rooms" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-              <span class="squeegee-handle-line"></span>
-              <span class="squeegee-handle-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 18l6-6-6-6"/></svg>
-              </span>
-              <span class="squeegee-handle-line"></span>
-            </button>
-          </div>
-
-          <div style="text-align: center; margin-top: var(--s-4);">
-            <button class="btn-secondary squeegee-toggle-btn">Toggle Before/After</button>
           </div>
         </div>
 

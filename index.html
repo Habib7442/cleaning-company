@@ -91,35 +91,10 @@
           </div>
         </div>
 
-        <!-- Squeegee Slider Container -->
+        <!-- Static Hero Image Container -->
         <div class="hero-slider-col reveal-on-scroll" style="transition-delay: 150ms;">
-          <div class="squeegee-slider" aria-label="Before and after transformation of living room">
-            
-            <!-- Before State (Bottom) -->
-            <div class="squeegee-image-container squeegee-before">
-              <img src="/assets/living_room_before.png" alt="Untidy dusty living room" class="squeegee-img" />
-              <div class="squeegee-label label-mono">Before</div>
-            </div>
-
-            <!-- After State (Top Masked) -->
-            <div class="squeegee-image-container squeegee-after">
-              <img src="/assets/living_room_after.png" alt="Spotless clean modern living room" class="squeegee-img" />
-              <div class="squeegee-label label-mono" style="right: 20px; left: auto; background-color: var(--citrus); color: var(--ink);">After</div>
-            </div>
-
-            <!-- Drag Handle (Citrus) -->
-            <button class="squeegee-handle" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-              <span class="squeegee-handle-line"></span>
-              <span class="squeegee-handle-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 18l6-6-6-6"/></svg>
-              </span>
-              <span class="squeegee-handle-line"></span>
-            </button>
-          </div>
-          
-          <!-- Slider Toggle Fallback for Screen Readers & Keyboard -->
-          <div class="slider-accessibility-fallback">
-            <button class="btn-secondary squeegee-toggle-btn" id="squeegee-accessible-toggle">Toggle Before/After Comparison</button>
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); box-shadow: var(--shadow-float); aspect-ratio: 4/3;">
+            <img src="/assets/lustra_hero_clean.png" alt="Spotless clean modern luxury living room" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
           </div>
         </div>
       </div>
@@ -141,6 +116,39 @@
       </div>
     </section>
 
+    <!-- 3.1 The Transformation Section (Before/After Static Grid) -->
+    <section class="section-padding container" id="home-transformation" style="border-bottom: 1px solid var(--line);">
+      <div class="grid-12" style="margin-bottom: var(--s-6); align-items: flex-end;">
+        <div class="col-span-6">
+          <span class="eyebrow">00 / The Standard</span>
+          <h2 style="margin-top: var(--s-3);">Meticulous craftsmanship.</h2>
+        </div>
+        <div class="col-span-6" style="text-align: right;">
+          <p class="text-muted" style="max-width: 450px; margin-left: auto; text-align: left;">
+            We don't just tidy. We restore your space to its initial design intention. Compare our before-and-after transformations side-by-side.
+          </p>
+        </div>
+      </div>
+      
+      <div class="grid-12" style="gap: var(--s-6);">
+        <!-- Before -->
+        <div class="col-span-6 reveal-on-scroll">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 16/10;">
+            <img src="/assets/living_room_before.png" alt="Living room before Lustra cleaning" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            <span class="label-mono" style="position: absolute; bottom: 20px; left: 20px; background-color: var(--ink); color: var(--bone); padding: 4px 10px; font-size: 11px;">Before</span>
+          </div>
+        </div>
+        
+        <!-- After -->
+        <div class="col-span-6 reveal-on-scroll" style="transition-delay: 150ms;">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 16/10;">
+            <img src="/assets/living_room_after.png" alt="Living room after Lustra cleaning" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            <span class="label-mono" style="position: absolute; bottom: 20px; left: 20px; background-color: var(--citrus); color: var(--ink); padding: 4px 10px; font-size: 11px;">After</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 4. Services typographically listed as a menu -->
     <section class="section-padding container" id="home-services">
       <div class="services-header grid-12" style="margin-bottom: var(--s-8);">
@@ -153,78 +161,88 @@
         </div>
       </div>
 
-      <div class="services-menu-list">
-        <div class="divider"></div>
-        
-        <a href="/services.html#home-clean" class="service-menu-row">
-          <div class="srv-col-title">
-            <h3 class="service-menu-name">Home Clean</h3>
+      <div class="grid-12" style="align-items: start; gap: var(--s-7);">
+        <!-- Visual Column (Left) -->
+        <div class="col-span-5 reveal-on-scroll">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 4/5; box-shadow: var(--shadow-float);">
+            <img src="/assets/lustra_services_preview.png" alt="spotless minimal design interior details" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
           </div>
-          <div class="srv-col-desc">
-            <p class="text-muted">Your everyday sanctuary, kept. Perfect for regular maintenance.</p>
-          </div>
-          <div class="srv-col-price">
-            <span class="label-mono">From $120</span>
-            <span class="srv-arrow">&rarr;</span>
-          </div>
-        </a>
-        <div class="divider"></div>
+        </div>
 
-        <a href="/services.html#deep-clean" class="service-menu-row">
-          <div class="srv-col-title">
-            <h3 class="service-menu-name">Deep Clean</h3>
-          </div>
-          <div class="srv-col-desc">
-            <p class="text-muted">A complete reset — down to the grout and behind appliances.</p>
-          </div>
-          <div class="srv-col-price">
-            <span class="label-mono">From $180</span>
-            <span class="srv-arrow">&rarr;</span>
-          </div>
-        </a>
-        <div class="divider"></div>
+        <!-- Menu List Column (Right) -->
+        <div class="col-span-7 services-menu-list reveal-on-scroll" style="transition-delay: 150ms;">
+          <div class="divider"></div>
+          
+          <a href="/services.html#home-clean" class="service-menu-row">
+            <div class="srv-col-title">
+              <h3 class="service-menu-name">Home Clean</h3>
+            </div>
+            <div class="srv-col-desc">
+              <p class="text-muted">Your everyday sanctuary, kept. Perfect for regular maintenance.</p>
+            </div>
+            <div class="srv-col-price">
+              <span class="label-mono">From $120</span>
+              <span class="srv-arrow">&rarr;</span>
+            </div>
+          </a>
+          <div class="divider"></div>
 
-        <a href="/services.html#move-clean" class="service-menu-row">
-          <div class="srv-col-title">
-            <h3 class="service-menu-name">Move In / Out</h3>
-          </div>
-          <div class="srv-col-desc">
-            <p class="text-muted">Leave nothing but light. Thorough cleaning for transitioning spaces.</p>
-          </div>
-          <div class="srv-col-price">
-            <span class="label-mono">From $216</span>
-            <span class="srv-arrow">&rarr;</span>
-          </div>
-        </a>
-        <div class="divider"></div>
+          <a href="/services.html#deep-clean" class="service-menu-row">
+            <div class="srv-col-title">
+              <h3 class="service-menu-name">Deep Clean</h3>
+            </div>
+            <div class="srv-col-desc">
+              <p class="text-muted">A complete reset — down to the grout and behind appliances.</p>
+            </div>
+            <div class="srv-col-price">
+              <span class="label-mono">From $180</span>
+              <span class="srv-arrow">&rarr;</span>
+            </div>
+          </a>
+          <div class="divider"></div>
 
-        <a href="/services.html#short-let" class="service-menu-row">
-          <div class="srv-col-title">
-            <h3 class="service-menu-name">Short-Let Turnaround</h3>
-          </div>
-          <div class="srv-col-desc">
-            <p class="text-muted">Guest-ready, every single time. Fast, reliable Airbnb cleaning.</p>
-          </div>
-          <div class="srv-col-price">
-            <span class="label-mono">From $144</span>
-            <span class="srv-arrow">&rarr;</span>
-          </div>
-        </a>
-        <div class="divider"></div>
+          <a href="/services.html#move-clean" class="service-menu-row">
+            <div class="srv-col-title">
+              <h3 class="service-menu-name">Move In / Out</h3>
+            </div>
+            <div class="srv-col-desc">
+              <p class="text-muted">Leave nothing but light. Thorough cleaning for transitioning spaces.</p>
+            </div>
+            <div class="srv-col-price">
+              <span class="label-mono">From $216</span>
+              <span class="srv-arrow">&rarr;</span>
+            </div>
+          </a>
+          <div class="divider"></div>
 
-        <a href="/contact.html?type=office" class="service-menu-row">
-          <div class="srv-col-title">
-            <h3 class="service-menu-name">Studio & Office</h3>
-          </div>
-          <div class="srv-col-desc">
-            <p class="text-muted">A workspace that breathes. Discreet cleaning for creative studios.</p>
-          </div>
-          <div class="srv-col-price">
-            <span class="label-mono">Tailored</span>
-            <span class="srv-arrow">&rarr;</span>
-          </div>
-        </a>
-        <div class="divider"></div>
+          <a href="/services.html#short-let" class="service-menu-row">
+            <div class="srv-col-title">
+              <h3 class="service-menu-name">Short-Let Turnaround</h3>
+            </div>
+            <div class="srv-col-desc">
+              <p class="text-muted">Guest-ready, every single time. Fast, reliable Airbnb cleaning.</p>
+            </div>
+            <div class="srv-col-price">
+              <span class="label-mono">From $144</span>
+              <span class="srv-arrow">&rarr;</span>
+            </div>
+          </a>
+          <div class="divider"></div>
+
+          <a href="/contact.html?type=office" class="service-menu-row">
+            <div class="srv-col-title">
+              <h3 class="service-menu-name">Studio & Office</h3>
+            </div>
+            <div class="srv-col-desc">
+              <p class="text-muted">A workspace that breathes. Discreet cleaning for creative studios.</p>
+            </div>
+            <div class="srv-col-price">
+              <span class="label-mono">Tailored</span>
+              <span class="srv-arrow">&rarr;</span>
+            </div>
+          </a>
+          <div class="divider"></div>
+        </div>
       </div>
     </section>
 
@@ -390,12 +408,11 @@
           </p>
           <a href="/about.html#sustainability" class="btn-secondary">Read our eco commitments &rarr;</a>
         </div>
-        <div class="col-span-6 reveal-on-scroll" style="display: flex; align-items: center; justify-content: center; transition-delay: 150ms;">
-          <div class="eco-visual-card" style="border: 1px solid var(--stone); background: var(--paper); padding: var(--s-6); border-radius: var(--radius); text-align: center; max-width: 380px;">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" style="margin-bottom: var(--s-4);"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v12M6 12h12"/></svg>
-            <h3 style="font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; margin-bottom: var(--s-2);">100% Biodegradable</h3>
-            <p class="small text-muted">All formulations decompose within 28 days without polluting aquatic systems.</p>
+        <div class="col-span-6 reveal-on-scroll" style="display: flex; flex-direction: column; align-items: center; justify-content: center; transition-delay: 150ms;">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--stone); aspect-ratio: 4/3; width: 100%; max-width: 480px; box-shadow: var(--shadow-float); margin-bottom: var(--s-3);">
+            <img src="/assets/lustra_sustainability.png" alt="Eco-friendly glass spray bottle, wooden scrub brush and soap" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
           </div>
+          <span class="label-mono" style="font-size: 11px; color: var(--slate);">100% Biodegradable · Plant-Derived Chemistry</span>
         </div>
       </div>
     </section>
